@@ -1,3 +1,15 @@
+***************************************************************************************************************
+Exercise #17: ToDO list App using React hooks 
+Implemented bonus features like adding priority and date attributes to tasks, raising and lowering tasks in the list, plus implemented simple animations using CSS and a prebuilt library
+
+
+By Nuno Rodrigues
+
+Mark received:
+Date: 
+Teacher:
+***************************************************************************************************************
+
 # Hello World with React boilerplate
 
 Start coding a react application
