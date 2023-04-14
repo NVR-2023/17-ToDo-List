@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 import Input from "./input.jsx";
 import Task from "./task.jsx";
-import { element } from "prop-types";
 
 // Home component
 const Home = () => {
@@ -44,27 +43,16 @@ const lowerTask = (index) => {
   return true;
 };
 
-function sortTasksByHigherPriority() {
-  const temporaryList = [...listOfTasks];
-  temporaryList.sort((a, b) => {
-    const priorityOrder = { Crucial: 0, Important: 1, Minor: 2 };
-    return priorityOrder[a.listPriority] - priorityOrder[b.listPriority];
-  });
-  temporaryList.forEach((element, i) => element.taskNumber = i+1);
-  setListOfTasks(temporaryList);
-}
-
-
-
-
 // JSX element    
   
   const jsxTasks = (
-    <div ref={parent}>
+    <div className="ul-wrapper" ref={parent}>
       {listOfTasks.map((element, index) => {
         return (
-          <div key={index} className="task-wrapper">
+          <ul className="task-wrapper">
             <Task
+              listOfTasksLastItem={listOfTasks.length-1}
+              taskIndex={index}
               taskNumber={element.taskNumber}
               taskId={element.taskId}
               taskLabel={element.taskLabel}
@@ -74,7 +62,7 @@ function sortTasksByHigherPriority() {
               raiseTask={raiseTask}
               lowerTask={lowerTask}
             />
-          </div>
+          </ul>
         );
       })}
     </div>
@@ -91,7 +79,6 @@ function sortTasksByHigherPriority() {
         </div>
     </div>
   );
-  consolelog(listOfTasks);
 };
 
 export default Home;
