@@ -43,11 +43,15 @@ const lowerTask = (index) => {
   return true;
 };
 
-// JSX element    
-  
-  const jsxTasks = (
-    <div className="ul-wrapper" ref={parent}>
-      {listOfTasks.map((element, index) => {
+  // JSX Code
+  return (
+    <div className="container-fluid vh-100 vw-100 d-flex justify-content-center ">
+      <div className="Components">
+        <div className="input-bar g-0 py-3">
+          <Input addNewTask={addTask} numberOfTasks={listOfTasks.length} />
+        </div>
+          <div className="ul-wrapper" ref={parent}>
+      {listOfTasks&&listOfTasks.map((element, index) => {
         return (
           <ul className="task-wrapper">
             <Task
@@ -66,16 +70,6 @@ const lowerTask = (index) => {
         );
       })}
     </div>
-  );
-
-  // Final JSX Code
-  return (
-    <div className="container-fluid vh-100 vw-100 d-flex justify-content-center ">
-      <div className="Components">
-        <div className="input-bar g-0 py-3">
-          <Input addNewTask={addTask} numberOfTasks={listOfTasks.length} />
-        </div>
-          {jsxTasks}
         </div>
     </div>
   );

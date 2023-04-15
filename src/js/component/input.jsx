@@ -52,6 +52,8 @@ const Input = ({ addNewTask , numberOfTasks }) => {
             }
           }}
           placeholder="Enter new task"
+          autoFocus
+          
         />
         <select
           className="task-input"

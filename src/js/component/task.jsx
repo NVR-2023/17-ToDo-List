@@ -1,7 +1,11 @@
 import React from "react";
 
 const Task = ({ listOfTasksLastItem , taskIndex, taskNumber, taskId, taskLabel, taskPriority, taskDate, deleteTask, raiseTask, lowerTask }) => {
-    
+    const isFirstTask = taskIndex === 0;
+    console.log(isFirstTask);
+    const isLastTask = taskIndex === listOfTasksLastItem;
+    console.log(isLastTask);
+
     return (
         <div key={taskIndex} className="task-container mx-auto my-1">
             <span className="taskNumber">

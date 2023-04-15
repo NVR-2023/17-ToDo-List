@@ -16,15 +16,25 @@ body {
 .task-input {
   font-style: italic;
   font-size: .7rem;
-  background-color: black; 
+  background-color: black;
   color: white;
   padding: .2rem;
   margin: .3rem;
   border: 1px white;
 }
 
+.task-input input {
+  border: 100px solid white !important;
+  border-radius: 5px;
+}
+
 input[type="date"]::-webkit-calendar-picker-indicator {
   filter: invert(1);
+}
+
+input[type="date"]:hover::-webkit-calendar-picker-indicator {
+  transform: scale(1.8);
+  transition: all 0.3s ease-in-out
 }
 
 ul {
@@ -43,18 +53,20 @@ ul {
 }
 
 .activeTasks {
-  border: solid grey 1px;
+  background: black;
   border-radius: .27rem;
   font-family: 'Roboto', sans-serif;
   font-style: italic;
   font-size: .7rem;   
-  color: grey;
+  color: white;
   height: 1.7rem;
   display: flex;
+  justify-content: right;
   align-items: center;
-  padding-left: .7rem;
+  padding-right: .7rem;
   margin-bottom: .5rem;
 }
+
 .taskNumber,
 .taskId,
 .taskLabel,
@@ -89,7 +101,6 @@ ul {
 
 .taskLabel {
   left: 125px;
-  font-size: .9ren;
 }
 
 .ul-wrapper {
@@ -154,3 +165,5 @@ ul {
   fill: red;
   transition: all 0.3s ease-in-out;
 }
+
+
