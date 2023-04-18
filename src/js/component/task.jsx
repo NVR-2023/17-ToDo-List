@@ -1,20 +1,13 @@
 import React from "react";
 
-const Task = ({ listOfTasksLastItem , taskIndex, taskNumber, taskId, taskLabel, taskPriority, taskDate, deleteTask, raiseTask, lowerTask }) => {
-    const isFirstTask = taskIndex === 0;
-    console.log(isFirstTask);
-    const isLastTask = taskIndex === listOfTasksLastItem;
-    console.log(isLastTask);
-
+const Task = ({ taskId, taskNumber, taskDate, taskLabel, taskPriority, deleteTask, raiseTask, lowerTask }) => {
+    
     return (
-        <div key={taskIndex} className="task-container mx-auto my-1">
+        <div className="task-container mx-auto my-1">
             <span className="taskNumber">
                 #{taskNumber.toString().padStart(2, '0')}
             </span>
-            <span className="taskId">
-                ID: {taskId}
-            </span>
-             <span className="taskDate"> 
+            <span className="taskDate"> 
                 {taskDate}
             </span>
             <span className="taskLabel">

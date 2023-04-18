@@ -54,18 +54,17 @@ const lowerTask = (index) => {
       {listOfTasks&&listOfTasks.map((element, index) => {
         return (
           <ul className="task-wrapper">
-            <Task
-              listOfTasksLastItem={listOfTasks.length-1}
-              taskIndex={index}
-              taskNumber={element.taskNumber}
-              taskId={element.taskId}
-              taskLabel={element.taskLabel}
-              taskPriority={element.taskPriority}
-              taskDate={element.taskDate}
-              deleteTask={deleteTask}
-              raiseTask={raiseTask}
-              lowerTask={lowerTask}
-            />
+            <li key={element.taskId}>
+              <Task
+                taskNumber={index+1}
+                taskDate={element.taskDate}
+                taskLabel={element.taskLabel}
+                taskPriority={element.taskPriority}
+                deleteTask={deleteTask}
+                raiseTask={raiseTask}
+                lowerTask={lowerTask}
+              />
+            </li>
           </ul>
         );
       })}

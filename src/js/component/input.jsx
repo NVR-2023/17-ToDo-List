@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 const Input = ({ addNewTask , numberOfTasks }) => {
+  const [ numberOfTasksAdded, setNumberOfTasksAdded] = useState(0);
   const [newInput, setNewInput] = useState("");
   const [newPriority, setNewPriority] = useState("Crucial");
   const [newDate, setNewDate] = useState(new Date().toISOString().slice(0, 10));
@@ -22,11 +23,12 @@ const Input = ({ addNewTask , numberOfTasks }) => {
     if (validateInput(newInput)) {
       let normalizedTask = normalizeInput(newInput);
       addNewTask({
-        taskId: Math.floor(Math.random() * 0x1FFFFFFFF).toString(16).padStart(9, '0'),
+        taskId: numberOfTasksAdded,
+        taskDate: newDate,
         taskLabel: normalizedTask,
         taskPriority: newPriority,
-        taskDate: newDate,
       });
+      setNumberOfTasksAdded((tasksAdded) => tasksAdded+1 )
       setNewInput("");
       setNewPriority("Crucial");
       setNewDate(new Date().toISOString().slice(0, 10));

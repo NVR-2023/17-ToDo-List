@@ -68,7 +68,6 @@ ul {
 }
 
 .taskNumber,
-.taskId,
 .taskLabel,
 .taskDate,
 .iconUp,
@@ -84,7 +83,8 @@ ul {
 .taskNumber {
   left: 5px;
   font-size: .5rem;
-  font-style: italic;
+  font-style:italic;
+  
 }
 
 .taskId {
@@ -94,13 +94,13 @@ ul {
 }
 
 .taskDate {
-  left: 78px;
+  left: 25px;
   font-style: italic;
   font-size: .5rem;
 }
 
 .taskLabel {
-  left: 125px;
+  left: 70px;
 }
 
 .ul-wrapper {
