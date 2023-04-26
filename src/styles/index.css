@@ -74,29 +74,24 @@ ul {
 .iconDown,
 .deleteIcon,
 .tag {
-  top: 7px;
   font-family: 'Roboto', sans-serif;
   font-size: .7rem;
   position: absolute;
+  bottom:5px;
 }
 
 .taskNumber {
   left: 5px;
   font-size: .5rem;
   font-style:italic;
-  
-}
-
-.taskId {
-  left: 23px;
-  font-style: italic;
-  font-size: .5rem;
+  bottom: 7px;
 }
 
 .taskDate {
-  left: 25px;
+  left: 22px;
   font-style: italic;
   font-size: .5rem;
+  bottom: 7px;
 }
 
 .taskLabel {
@@ -122,6 +117,7 @@ ul {
   color: #F3E600;
   padding: 1px;
   font-size: .45rem;
+  bottom: 6px;
 }
 
 .iconUp {
@@ -165,5 +161,3 @@ ul {
   fill: red;
   transition: all 0.3s ease-in-out;
 }
-
-
